@@ -1,0 +1,238 @@
+@import "layout.css";
+@import "nav.css";
+@import "footer.css";
+#grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: minmax(30px, auto);
+  gap: 8px;
+  grid-template-areas:
+    "nav nav"
+    "main-post main-post"
+    "newsletter newsletter"
+    "post-1 post-2"
+    "post-3 post-4"
+    "post-6 post-7"
+    "ft ft"
+    "ft ft";
+}
+@media (min-width: 600px) {
+  #grid {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 60px auto auto auto 30px;
+    gap: 6px;
+    grid-template-areas:
+      "nav nav nav nav"
+      "main-post main-post post-1 post-2"
+      "main-post main-post post-6 post-7"
+      "post-3 newsletter newsletter post-4"
+      "ft ft ft ft"
+      "ft ft ft ft";
+  }
+}
+#main-post {
+  grid-area: main-post;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/kolkata.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  color: #fffaf0;
+}
+.post {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fffaf0;
+  min-height: 160px;
+}
+#post-1 {
+  grid-area: post-1;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) !important;
+  transition: 0.3s;
+}
+#post-2 {
+  grid-area: post-2;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) !important;
+  transition: 0.3s;
+}
+#post-3 {
+  grid-area: post-3;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) !important;
+  transition: 0.3s;
+}
+#post-4 {
+  grid-area: post-4;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) !important;
+  transition: 0.3s;
+}
+#post-6 {
+  grid-area: post-6;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) !important;
+  transition: 0.3s;
+}
+#post-7 {
+  grid-area: post-7;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) !important;
+  transition: 0.3s;
+}
+.text-gradient {
+  background-color: rgba(0, 0, 0, 0.5);
+  min-width: 60%;
+  max-width: 500px;
+  padding: 10px 20px;
+  margin: 20px;
+  text-align: center;
+  border-radius: 2px;
+}
+.link {
+  outline: none;
+  text-decoration: none;
+}
+.link:visited {
+  color: #fffaf0;
+}
+.link:hover {
+  color: rgb(14, 165, 165);
+}
+@media (min-width: 600px) and (max-width: 1200px) {
+  .post h4 {
+    font-size: 1.5em;
+  }
+
+  .post .post-info {
+    font-size: 0.8em;
+  }
+
+  .text-gradient {
+    padding: 5px 15px;
+    margin: 5px;
+  }
+}
+#newsletter {
+  grid-area: newsletter;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.newsletter-container {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 5px;
+  font-size: 10px;
+}
+.fields {
+  width: 32%;
+}
+input[type=text],
+input[type=submit] {
+  text-align: center;
+  font-size: 1.2em;
+  width: 100%;
+  padding: 12px;
+  margin: 8px 5px;
+  border: 1px solid #fffaf0;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+input[type=submit] {
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  background-color: #e54b4b;
+  border: 2px solid #e54b4b;
+  color: #fffaf0;
+  transition: all 0.3s;
+}
+input[type=submit]:hover {
+  background-color: transparent;
+  border: 2px solid #e54b4b;
+  color: #e54b4b;
+  transform: scale(0.9);
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 30px;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.container {
+  padding: 0;
+}
+@media (min-width: 600px) and (max-width: 780px) {
+  .newsletter-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+  }
+
+  .fields {
+    width: 40%;
+  }
+
+  input[type=submit] {
+    font-size: 0.9em;
+  }
+}

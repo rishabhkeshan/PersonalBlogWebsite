@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat',sans-serif;
+}
+body {
+  font-size: 14px;
+  line-height: 1.6;
+  background-color: rgb(212, 245, 255);
+  color: #222;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: 0.05em;
+  margin: 0.2em 0;
+  text-align: center;
+}
+h2 {
+  font-size: 2.7em;
+}
+h3 {
+  font-size: 2.4em;
+}
+h4 {
+  font-size: 1.9em;
+}
+h5 {
+  font-size: 1.5em;
+}
+h6 {
+  font-size: 1.2em;
+  text-align: left;
+}
+p {
+  text-align: left;
+  font-size: 1em;
+  margin: 1em 0 0;
+}
+p+p {
+  margin: 0;
+}
+a {
+  outline: none;
+  text-decoration: none;
+  color: rgb(14, 165, 165);
+}
+a:visited {
+  color: rgb(14, 165, 165);
+}
+a:hover {
+  color: #e54b4b;
+}
+strong {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+em {
+  font-style: 500i;
+  letter-spacing: 0.05em;
+}
+figcaption {
+  font-style: italic;
+  font-size: 0.8em;
+  text-align: right;
+}
+.card .container{
+  margin:0;
+  padding-left: 5px;
+}
+.btn-primary {
+  width: 150px;
+  padding: 10px 0;
+  font-size: 1.1em;
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 15px 0;
+  cursor: pointer;
+  display: inline-block;
+  background-color: transparent;
+  border: 2px solid rgb(14, 165, 165);
+  border-radius: 3px;
+  color: rgb(14, 165, 165);
+  transition: all 0.3s;
+}
+.btn-primary:hover {
+  background-color: rgb(14, 165, 165);
+  border: 2px solid rgb(14, 165, 165);
+  border-radius: 3px;
+  color: #fffaf0;
+  transform: scale(0.9);
+}
